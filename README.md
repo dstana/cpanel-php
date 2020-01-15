@@ -10,7 +10,7 @@
 
 To install this package, you can run this code via your terminal
 ```shell
-	composer require gufy/cpanel-whm:dev-master
+	composer require gufy/cpanel-php:dev-master
 ```
 Or update your `composer.json` by adding this line
 ```json
@@ -67,7 +67,7 @@ For example, you would like to get some list accounts from cPanel/WHM
 	$accounts = $cpanel->listaccts();
 
 	// passing parameters
-	$accounts = $cpanel->listaccts(['searchtype'=>'domain', 'search'=>'', 'exact', 'search'=>'helloworld.com']);
+	$accounts = $cpanel->listaccts(['searchtype'=>'domain', 'searchmethod'=>'exact', 'search'=>'helloworld.com']);
 	
 	// create account (Domain Name, Username, Password, Plan Slug)
 	createAccount(www.domain_name.com.br, 'user', 'pass', 'plan_basic');
